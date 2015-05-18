@@ -5,7 +5,7 @@ setup(
     name='houtools',
     version='0.1.0',
     description='General tools for Houdini.',
-    url='http://github.com/mikeboers/houtools',
+    url='http://github.com/sitg/houtools',
     
     packages=find_packages(exclude=['build*', 'tests*']),
     

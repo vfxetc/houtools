@@ -16,7 +16,11 @@ def dispatch(entrypoint, args=(), kwargs={}, reload=None):
 def load(path=None):
 
     if path is None:
-        path = os.environ.get('HOUTOOLS_SHELVES', '').split(':')
+        path = os.environ.get('HOUTOOLS_SHELVES')
+        if path is None:
+            return
+        path = path.split(':')
+    
     for root in path:
         for dir_path, dir_names, file_names in os.walk(root):
             for file_name in file_names:

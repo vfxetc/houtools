@@ -17,5 +17,11 @@ setup(
         'metatools',
         'pyyaml',
     ],
+
+    entry_points={
+        'appinit_houdini': '''
+            houtools_shelf = houtools.shelf:load
+        ''',
+    }
     
 )

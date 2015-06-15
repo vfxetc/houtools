@@ -19,7 +19,7 @@ setup(
     ],
 
     entry_points={
-        'appinit_houdini': '''
+        'appinit_houdini_gui_idle': '''
             houtools_shelf = houtools.shelf:load
         ''',
     }

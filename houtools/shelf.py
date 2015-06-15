@@ -5,11 +5,11 @@ import yaml
 
 import hou
 
-from . import utils
+from metatools.imports import load_entrypoint
 
 
 def dispatch(entrypoint, args=(), kwargs={}, reload=None):
-    func = utils.resolve_entrypoint(entrypoint, reload=reload)
+    func = load_entrypoint(entrypoint, reload=reload)
     return func(*args, **kwargs)
 
 
